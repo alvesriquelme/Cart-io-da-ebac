@@ -130,6 +130,7 @@ int laco=1;
 	printf("\t1 - Registrar nomes\n");
 	printf("\t2 - Consultar nomes\n");
 	printf("\t3 - Deletar nomes\n\n");//fim do menu
+	printf("\t4 - Sair do sistema\n\n");
 	printf("Digite a sua opção: ");
 	
 	scanf("%d" , &opcao); //armazenando as escolhas do usuario 
@@ -148,6 +149,11 @@ int laco=1;
 		
 		case 3:
 		deletar();
+		break;
+		
+		case 4:
+		printf("Obrigado por utilizar o sistema!");
+		return 0;		
 		break;
 		
 		default://FIM DA SELEÇÃO
