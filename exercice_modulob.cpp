@@ -115,12 +115,25 @@ int deletar()
 
 int main()
 {
-	
-int opcao=0; //definindo variaveis
-int laco=1;
-	
-	for(laco=1;laco=1;)
+	int opcao=0; //definindo variaveis
+	int laco=1;
+	char senhadigitada[]="a";
+	int comparacao;
+
+
+printf("###Cartório da EBAC###\n\n");
+printf("Login de administrador!\n\nDigite a sua senha:  ");
+scanf("%s", senhadigitada);
+
+comparacao = strcmp(senhadigitada, "admin");
+
+if(comparacao == 0)
 	{
+			
+
+	system("cls");
+	for(laco=1;laco=1;)
+		{
 	
 	
 	 
@@ -138,32 +151,35 @@ int laco=1;
 	system("cls");//deixando o programa mais limpo
 	
 	switch(opcao)//INICIO DA SELEÇÃO
-	{
-		case 1:
-		registro();// chamada de funções
-		break;
+			{
+				case 1:
+				registro();// chamada de funções
+				break;
 		
-		case 2:
-		consulta();
-		break;
+				case 2:
+				consulta();
+				break;
 		
-		case 3:
-		deletar();
-		break;
+				case 3:
+				deletar();
+				break;
 		
-		case 4:
-		printf("Obrigado por utilizar o sistema!");
-		return 0;		
-		break;
+				case 4:
+				printf("Obrigado por utilizar o sistema!");
+				return 0;		
+				break;
 		
-		default://FIM DA SELEÇÃO
-		printf("Essa opção não está disponível \n");
-		system("pause");
-		break;
+				default://FIM DA SELEÇÃO
+				printf("Essa opção não está disponível \n");
+				system("pause");
+				break;
 		
-	}
+			}
 	
-
+		}
 	}
+	else
+	printf("Senha incorreta!");
 }
 
+	
